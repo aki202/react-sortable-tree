@@ -51,8 +51,9 @@ onChange<br/>_(required)_ | func           | Called whenever tree data changed. 
 onDragStart | func           | Called when the dragging is started. <div>`(): void`</div>
 getNodeKey<br/>_(recommended)_ | func      | Specify the unique key used to identify each node and generate the `path` array passed in callbacks. It uses [`defaultGetNodeKey`](https://github.com/fritz-c/react-sortable-tree/blob/master/src/utils/default-handlers.js) by default, which returns the index in the tree (omitting hidden nodes).<div>`({ node: object, treeIndex: number }): string or number`</div>
 generateNodeProps         | func           | Generate an object with additional props to be passed to the node renderer. Use this for adding buttons via the `buttons` key, or additional `style` / `className` settings.<div>`({ node: object, path: number[] or string[], treeIndex: number, lowerSiblingCounts: number[], isSearchMatch: bool, isSearchFocus: bool }): object`</div>
-onMoveNode                | func           | Called after node move operation. <div>`({ treeData: object[], node: object, prevPath: number[] or string[], prevTreeIndex: number, nextPath: number[] or string[], nextTreeIndex: number }): void`</div>
+onMoveNode                | func           | Called after node move operation. <div>`({ treeData: object[], node: object, nextParentNode: object, prevPath: number[] or string[], prevTreeIndex: number, nextPath: number[] or string[], nextTreeIndex: number }): void`</div>
 onVisibilityToggle        | func           | Called after children nodes collapsed or expanded. <div>`({ treeData: object[], node: object, expanded: bool, path: number[] or string[] }): void`</div>
+onDragStateChanged        | func           | Called when a drag is initiated or ended. <div>`({ isDragging: bool, draggedNode: object }): void`</div>
 maxDepth                  | number         | Maximum depth nodes can be inserted at. Defaults to infinite.
 canDrag                   | func or bool   | Return false from callback to prevent node from dragging, by hiding the drag handle. Set prop to `false` to disable dragging on all nodes. Defaults to `true`. <div>`({ node: object, path: number[] or string[], treeIndex: number, lowerSiblingCounts: number[], isSearchMatch: bool, isSearchFocus: bool }): bool`</div>
 canDrop                   | func           | Return false to prevent node from dropping in the given location. <div>`({ node: object, prevPath: number[] or string[], prevParent: object, prevTreeIndex: number, nextPath: number[] or string[], nextParent: object, nextTreeIndex: number }): bool`</div>
@@ -67,7 +68,7 @@ reactVirtualizedListProps | object         | Custom properties to hand to the [r
 style                     | object         | Style applied to the container wrapping the tree (style defaults to {height: '100%'})
 innerStyle                | object         | Style applied to the inner, scrollable container (for padding, etc.)
 className                 | string         | Class name for the container wrapping the tree
-rowHeight                 | number or func | Used by react-virtualized. Defaults to `62`. Either a fixed row height (number) or a function that returns the height of a row given its index: `({ index: number }): number`
+rowHeight                 | number or func | Used by react-virtualized. Defaults to `62`. Either a fixed row height (number) or a function that returns the height of a row given its index: `({ treeIndex: number, node: object, path: number[] or string[] }): number`
 slideRegionSize           | number         | Size in px of the region near the edges that initiates scrolling on dragover.Defaults to `100`.
 scaffoldBlockPxWidth      | number         | The width of the blocks containing the lines representing the structure of the tree.Defaults to `44`.
 isVirtualized             | bool           | Set to false to disable virtualization. Defaults to `true`. __NOTE__: Auto-scrolling while dragging, and scrolling to the `searchFocusOffset` will be disabled.
@@ -85,7 +86,7 @@ Notable among the available functions:
 - __`getTreeFromFlatData`__: Convert flat data (like that from a database) into nested tree data
 - __`getFlatDataFromTree`__: Convert tree data back to flat data
 - __`addNodeUnderParent`__: Add a node under the parent node at the given path
-- __`removeNodeAtPath`__: Remove the node at the given path
+- __`removeNode`__: For a given path, get the node at that path and the treeData with that node removed.
 - __`changeNodeAtPath`__: Modify the node object at the given path
 - __`map`__: Perform a change on every node in the tree
 - __`walk`__: Visit every node in the tree in order
@@ -117,6 +118,12 @@ Using the `theme` prop along with an imported theme module, you can easily overr
 | IE 11 | Yes |
 
 ## Troubleshooting
+
+### If it throws "TypeError: fn is not a function" errors in production
+
+This issue may be related to an ongoing incompatibility between UglifyJS and Webpack's behavior. See an explanation at [create-react-app#2376](https://github.com/facebookincubator/create-react-app/issues/2376).
+
+The simplest way to mitigate this issue is by adding `comparisons: false` to your Uglify config as seen here: https://github.com/facebookincubator/create-react-app/pull/2379/files
 
 ### If it doesn't work with other components that use react-dnd
 

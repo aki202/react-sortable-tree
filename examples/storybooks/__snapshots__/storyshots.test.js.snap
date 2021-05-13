@@ -216,6 +216,23 @@ exports[`Storyshots Advanced Drag from external source 1`] = `
     ← drag this
   </div>
   <br />
+  <form
+    action="https://codesandbox.io/api/v1/sandboxes/define"
+    id="codesandbox-form"
+    method="POST"
+  >
+    <input
+      id="codesandbox-parameters"
+      name="parameters"
+      type="hidden"
+    />
+  </form>
+  <button
+    className="sandboxButton"
+    onClick={[Function]}
+  >
+    PLAY WITH THIS CODE →
+  </button>
   <a
     className="sourceLink"
     href="https://github.com/fritz-c/react-sortable-tree/blob/master/examples/storybooks/external-node.js"
@@ -679,6 +696,23 @@ exports[`Storyshots Advanced Drag out to remove 1`] = `
     </div>
   </div>
   <br />
+  <form
+    action="https://codesandbox.io/api/v1/sandboxes/define"
+    id="codesandbox-form"
+    method="POST"
+  >
+    <input
+      id="codesandbox-parameters"
+      name="parameters"
+      type="hidden"
+    />
+  </form>
+  <button
+    className="sandboxButton"
+    onClick={[Function]}
+  >
+    PLAY WITH THIS CODE →
+  </button>
   <a
     className="sourceLink"
     href="https://github.com/fritz-c/react-sortable-tree/blob/master/examples/storybooks/drag-out-to-remove.js"
@@ -985,6 +1019,23 @@ exports[`Storyshots Advanced Playing with generateNodeProps 1`] = `
     </div>
   </div>
   <br />
+  <form
+    action="https://codesandbox.io/api/v1/sandboxes/define"
+    id="codesandbox-form"
+    method="POST"
+  >
+    <input
+      id="codesandbox-parameters"
+      name="parameters"
+      type="hidden"
+    />
+  </form>
+  <button
+    className="sandboxButton"
+    onClick={[Function]}
+  >
+    PLAY WITH THIS CODE →
+  </button>
   <a
     className="sourceLink"
     href="https://github.com/fritz-c/react-sortable-tree/blob/master/examples/storybooks/generate-node-props.js"
@@ -1233,6 +1284,23 @@ exports[`Storyshots Advanced Touch support (Experimental) 1`] = `
     </div>
   </div>
   <br />
+  <form
+    action="https://codesandbox.io/api/v1/sandboxes/define"
+    id="codesandbox-form"
+    method="POST"
+  >
+    <input
+      id="codesandbox-parameters"
+      name="parameters"
+      type="hidden"
+    />
+  </form>
+  <button
+    className="sandboxButton"
+    onClick={[Function]}
+  >
+    PLAY WITH THIS CODE →
+  </button>
   <a
     className="sourceLink"
     href="https://github.com/fritz-c/react-sortable-tree/blob/master/examples/storybooks/touch-support.js"
@@ -1693,6 +1761,23 @@ exports[`Storyshots Advanced Tree-to-tree dragging 1`] = `
     </div>
   </div>
   <br />
+  <form
+    action="https://codesandbox.io/api/v1/sandboxes/define"
+    id="codesandbox-form"
+    method="POST"
+  >
+    <input
+      id="codesandbox-parameters"
+      name="parameters"
+      type="hidden"
+    />
+  </form>
+  <button
+    className="sandboxButton"
+    onClick={[Function]}
+  >
+    PLAY WITH THIS CODE →
+  </button>
   <a
     className="sourceLink"
     href="https://github.com/fritz-c/react-sortable-tree/blob/master/examples/storybooks/tree-to-tree.js"
@@ -1950,9 +2035,357 @@ exports[`Storyshots Basics Add and remove nodes programmatically 1`] = `
     </button>
   </div>
   <br />
+  <form
+    action="https://codesandbox.io/api/v1/sandboxes/define"
+    id="codesandbox-form"
+    method="POST"
+  >
+    <input
+      id="codesandbox-parameters"
+      name="parameters"
+      type="hidden"
+    />
+  </form>
+  <button
+    className="sandboxButton"
+    onClick={[Function]}
+  >
+    PLAY WITH THIS CODE →
+  </button>
   <a
     className="sourceLink"
     href="https://github.com/fritz-c/react-sortable-tree/blob/master/examples/storybooks/add-remove.js"
+    rel="noopener noreferrer"
+    target="_top"
+  >
+    VIEW SOURCE →
+  </a>
+</div>
+`;
+
+exports[`Storyshots Basics Callbacks 1`] = `
+<div>
+  <div>
+    Open your console to see callback parameter info
+    <div
+      style={
+        Object {
+          "height": 300,
+        }
+      }
+    >
+      <div
+        className="tree"
+        style={
+          Object {
+            "height": "100%",
+          }
+        }
+      >
+        <div>
+          <div
+            aria-label="grid"
+            aria-readonly={true}
+            className="ReactVirtualized__Grid ReactVirtualized__List virtualScrollOverride"
+            id={undefined}
+            onScroll={[Function]}
+            role="grid"
+            style={
+              Object {
+                "WebkitOverflowScrolling": "touch",
+                "boxSizing": "border-box",
+                "direction": "ltr",
+                "height": 99999,
+                "overflowX": "hidden",
+                "overflowY": "hidden",
+                "position": "relative",
+                "width": 200,
+                "willChange": "transform",
+              }
+            }
+            tabIndex={0}
+          >
+            <div
+              className="ReactVirtualized__Grid__innerScrollContainer"
+              role="rowgroup"
+              style={
+                Object {
+                  "height": 186,
+                  "maxHeight": 186,
+                  "maxWidth": 200,
+                  "overflow": "hidden",
+                  "pointerEvents": "",
+                  "position": "relative",
+                  "width": "auto",
+                }
+              }
+            >
+              <div
+                className="node"
+                style={
+                  Object {
+                    "height": 62,
+                    "left": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              >
+                <div
+                  className="lineBlock lineHalfHorizontalRight lineHalfVerticalBottom"
+                  style={
+                    Object {
+                      "width": 44,
+                    }
+                  }
+                />
+                <div
+                  className="nodeContent"
+                  style={
+                    Object {
+                      "left": 44,
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "height": "100%",
+                      }
+                    }
+                  >
+                    <div>
+                      <button
+                        aria-label="Collapse"
+                        className="collapseButton"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "left": -22,
+                          }
+                        }
+                        type="button"
+                      />
+                      <div
+                        className="lineChildren"
+                        style={
+                          Object {
+                            "width": 44,
+                          }
+                        }
+                      />
+                    </div>
+                    <div
+                      className="rowWrapper"
+                    >
+                      <div
+                        className="row"
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                      >
+                        <div
+                          className="moveHandle"
+                        />
+                        <div
+                          className="rowContents"
+                        >
+                          <div
+                            className="rowLabel"
+                          >
+                            <span
+                              className="rowTitle"
+                            >
+                              A
+                            </span>
+                          </div>
+                          <div
+                            className="rowToolbar"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="node"
+                style={
+                  Object {
+                    "height": 62,
+                    "left": 0,
+                    "position": "absolute",
+                    "top": 62,
+                    "width": "100%",
+                  }
+                }
+              >
+                <div
+                  className="lineBlock lineFullVertical"
+                  style={
+                    Object {
+                      "width": 44,
+                    }
+                  }
+                />
+                <div
+                  className="lineBlock lineHalfVerticalTop lineHalfHorizontalRight"
+                  style={
+                    Object {
+                      "width": 44,
+                    }
+                  }
+                />
+                <div
+                  className="nodeContent"
+                  style={
+                    Object {
+                      "left": 88,
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "height": "100%",
+                      }
+                    }
+                  >
+                    <div
+                      className="rowWrapper"
+                    >
+                      <div
+                        className="row"
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                      >
+                        <div
+                          className="moveHandle"
+                        />
+                        <div
+                          className="rowContents"
+                        >
+                          <div
+                            className="rowLabel"
+                          >
+                            <span
+                              className="rowTitle"
+                            >
+                              B
+                            </span>
+                          </div>
+                          <div
+                            className="rowToolbar"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="node"
+                style={
+                  Object {
+                    "height": 62,
+                    "left": 0,
+                    "position": "absolute",
+                    "top": 124,
+                    "width": "100%",
+                  }
+                }
+              >
+                <div
+                  className="lineBlock lineHalfVerticalTop lineHalfHorizontalRight"
+                  style={
+                    Object {
+                      "width": 44,
+                    }
+                  }
+                />
+                <div
+                  className="nodeContent"
+                  style={
+                    Object {
+                      "left": 44,
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "height": "100%",
+                      }
+                    }
+                  >
+                    <div
+                      className="rowWrapper"
+                    >
+                      <div
+                        className="row"
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                      >
+                        <div
+                          className="moveHandle"
+                        />
+                        <div
+                          className="rowContents"
+                        >
+                          <div
+                            className="rowLabel"
+                          >
+                            <span
+                              className="rowTitle"
+                            >
+                              C
+                            </span>
+                          </div>
+                          <div
+                            className="rowToolbar"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <form
+    action="https://codesandbox.io/api/v1/sandboxes/define"
+    id="codesandbox-form"
+    method="POST"
+  >
+    <input
+      id="codesandbox-parameters"
+      name="parameters"
+      type="hidden"
+    />
+  </form>
+  <button
+    className="sandboxButton"
+    onClick={[Function]}
+  >
+    PLAY WITH THIS CODE →
+  </button>
+  <a
+    className="sourceLink"
+    href="https://github.com/fritz-c/react-sortable-tree/blob/master/examples/storybooks/callbacks.js"
     rel="noopener noreferrer"
     target="_top"
   >
@@ -2191,6 +2624,23 @@ exports[`Storyshots Basics Minimal implementation 1`] = `
     </div>
   </div>
   <br />
+  <form
+    action="https://codesandbox.io/api/v1/sandboxes/define"
+    id="codesandbox-form"
+    method="POST"
+  >
+    <input
+      id="codesandbox-parameters"
+      name="parameters"
+      type="hidden"
+    />
+  </form>
+  <button
+    className="sandboxButton"
+    onClick={[Function]}
+  >
+    PLAY WITH THIS CODE →
+  </button>
   <a
     className="sourceLink"
     href="https://github.com/fritz-c/react-sortable-tree/blob/master/examples/storybooks/barebones.js"
@@ -2528,6 +2978,23 @@ exports[`Storyshots Basics Modify nodes 1`] = `
     </div>
   </div>
   <br />
+  <form
+    action="https://codesandbox.io/api/v1/sandboxes/define"
+    id="codesandbox-form"
+    method="POST"
+  >
+    <input
+      id="codesandbox-parameters"
+      name="parameters"
+      type="hidden"
+    />
+  </form>
+  <button
+    className="sandboxButton"
+    onClick={[Function]}
+  >
+    PLAY WITH THIS CODE →
+  </button>
   <a
     className="sourceLink"
     href="https://github.com/fritz-c/react-sortable-tree/blob/master/examples/storybooks/modify-nodes.js"
@@ -3098,6 +3565,23 @@ exports[`Storyshots Basics Prevent drop 1`] = `
     </div>
   </div>
   <br />
+  <form
+    action="https://codesandbox.io/api/v1/sandboxes/define"
+    id="codesandbox-form"
+    method="POST"
+  >
+    <input
+      id="codesandbox-parameters"
+      name="parameters"
+      type="hidden"
+    />
+  </form>
+  <button
+    className="sandboxButton"
+    onClick={[Function]}
+  >
+    PLAY WITH THIS CODE →
+  </button>
   <a
     className="sourceLink"
     href="https://github.com/fritz-c/react-sortable-tree/blob/master/examples/storybooks/can-drop.js"
@@ -3299,6 +3783,23 @@ exports[`Storyshots Basics Search 1`] = `
     </div>
   </div>
   <br />
+  <form
+    action="https://codesandbox.io/api/v1/sandboxes/define"
+    id="codesandbox-form"
+    method="POST"
+  >
+    <input
+      id="codesandbox-parameters"
+      name="parameters"
+      type="hidden"
+    />
+  </form>
+  <button
+    className="sandboxButton"
+    onClick={[Function]}
+  >
+    PLAY WITH THIS CODE →
+  </button>
   <a
     className="sourceLink"
     href="https://github.com/fritz-c/react-sortable-tree/blob/master/examples/storybooks/search.js"
@@ -3776,6 +4277,23 @@ exports[`Storyshots Basics Themes 1`] = `
     </div>
   </div>
   <br />
+  <form
+    action="https://codesandbox.io/api/v1/sandboxes/define"
+    id="codesandbox-form"
+    method="POST"
+  >
+    <input
+      id="codesandbox-parameters"
+      name="parameters"
+      type="hidden"
+    />
+  </form>
+  <button
+    className="sandboxButton"
+    onClick={[Function]}
+  >
+    PLAY WITH THIS CODE →
+  </button>
   <a
     className="sourceLink"
     href="https://github.com/fritz-c/react-sortable-tree/blob/master/examples/storybooks/themes.js"
@@ -4040,6 +4558,23 @@ exports[`Storyshots Basics treeData import/export 1`] = `
     </ul>
   </div>
   <br />
+  <form
+    action="https://codesandbox.io/api/v1/sandboxes/define"
+    id="codesandbox-form"
+    method="POST"
+  >
+    <input
+      id="codesandbox-parameters"
+      name="parameters"
+      type="hidden"
+    />
+  </form>
+  <button
+    className="sandboxButton"
+    onClick={[Function]}
+  >
+    PLAY WITH THIS CODE →
+  </button>
   <a
     className="sourceLink"
     href="https://github.com/fritz-c/react-sortable-tree/blob/master/examples/storybooks/tree-data-io.js"
